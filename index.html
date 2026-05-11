@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paticas Tauste — Adopción Responsable</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="scrollToTop()" style="cursor:pointer;">
+        <img src="logo.jfif" alt="Paticas Tauste" class="nav-logo-img" />
+        <span class="nav-brand">Paticas Tauste</span>
+      </div>
+      <div class="nav-links">
+        <a href="#" onclick="smoothTo('como-funciona');return false;">¿Cómo funciona?</a>
+        <a href="#" onclick="smoothTo('reels');return false;">Nuestros peludos</a>
+        <a href="#" onclick="smoothTo('adoptar');return false;">Adoptar</a>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#" onclick="smoothTo('como-funciona');toggleMenu();return false;">¿Cómo funciona?</a>
+      <a href="#" onclick="smoothTo('reels');toggleMenu();return false;">Nuestros peludos</a>
+      <a href="#" onclick="smoothTo('adoptar');toggleMenu();return false;">Adoptar</a>
+    </div>
+  </nav>
+
+  <main id="main-page">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <span class="hero-eyebrow">Protectora animal · Tauste</span>
+          <h1 class="hero-title">Cada perro<br/><em>tiene su familia.</em></h1>
+          <p class="hero-sub">Te ayudamos a encontrar al compañero perfecto según tu estilo de vida. Sin prisas, con corazón y con un sistema de compatibilidad hecho con cariño.</p>
+          <div class="hero-btns">
+            <a href="#" class="btn-main hero-cta" onclick="smoothTo('reels');return false;">Conocer a los peludos ↓</a>
+            <a href="#" class="btn-ghost" onclick="smoothTo('como-funciona');return false;">¿Cómo funciona?</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-logo-wrap">
+            <img src="logo.jfif" alt="Paticas Tauste" class="hero-logo" />
+          </div>
+          <div class="hero-pills">
+            <span class="pill">🐕 <strong id="stat-dogs">4</strong> peludos esperándote</span>
+            <span class="pill">❤️ Adopción responsable</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REELS / MEDIA PÚBLICO ===== -->
+    <section class="reels-section" id="reels">
+      <div class="reels-header">
+        <span class="section-eyebrow">Conócelos</span>
+        <h2>Nuestros peludos en acción</h2>
+        <p>Desliza para verlos, toca para conocerlos mejor</p>
+      </div>
+      <div class="reels-track-wrap">
+        <div class="reels-track" id="reels-track">
+          <!-- JS rellena aquí -->
+        </div>
+      </div>
+      <div class="reels-empty hidden" id="reels-empty">
+        <div class="reels-empty-icon">🐾</div>
+        <p>Pronto subiremos fotos y vídeos de nuestros peludos.<br/>¡Vuelve pronto!</p>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="how-section" id="como-funciona">
+      <div class="how-header">
+        <span class="section-eyebrow">Simple y transparente</span>
+        <h2>¿Cómo funciona<br/>el <em>matching</em>?</h2>
+        <p>Solo 4 pasos para encontrar a tu compañero ideal.</p>
+      </div>
+      <div class="steps-row">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-emoji">🐕</div>
+          <h3>Elige un perro</h3>
+          <p>Explora los peludos. Cada perfil muestra tamaño, energía y sus necesidades especiales.</p>
+        </div>
+        <div class="step-connector">→</div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-emoji">💛</div>
+          <h3>Enamórate</h3>
+          <p>¿Uno te ha robado el corazón? Pulsa en su tarjeta y el test se abre al instante.</p>
+        </div>
+        <div class="step-connector">→</div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-emoji">📋</div>
+          <h3>Responde el test</h3>
+          <p>6 preguntas breves sobre tu vida. Una a una, sin agobios.</p>
+        </div>
+        <div class="step-connector">→</div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <div class="step-emoji">🎯</div>
+          <h3>Ve tu compatibilidad</h3>
+          <p>Calculamos tu % y te sugerimos alternativas. Si convence, enviamos tu solicitud.</p>
+        </div>
+      </div>
+      <div class="how-disclaimer">
+        <span>💬</span>
+        <p>El resultado es <strong>orientativo</strong>, no definitivo. La adopción final siempre se valora en persona. ¡Lo importante es que vengas a conocerlos!</p>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem;">
+        <a href="#" class="btn-main" onclick="smoothTo('adoptar');return false;">↓ Ir a adoptar</a>
+      </div>
+    </section>
+
+    <!-- GALERÍA DE PERROS -->
+    <section class="adopt-wrap" id="adoptar">
+      <div class="adopt-inner">
+        <div class="adopt-header">
+          <span class="section-eyebrow">Adopción</span>
+          <h2>Elige a tu compañero</h2>
+          <p>Pulsa en el que más te guste para ver su perfil completo y hacer el test</p>
+        </div>
+        <div class="dog-grid" id="dog-grid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PANEL PROTECTORA -->
+  <main id="admin-page" class="hidden">
+    <div class="admin-wrap">
+      <div class="admin-topbar">
+        <button class="btn-outline" onclick="hideAdmin()">← Volver a la web</button>
+        <h2>Panel de la protectora</h2>
+        <div class="admin-tools">
+          <button class="btn-main" onclick="openAddModal()">+ Añadir perro</button>
+          <button class="btn-outline" onclick="simulateImport()">↑ Importar CSV</button>
+          <span class="dog-count-badge" id="admin-dog-count">0 perros</span>
+        </div>
+      </div>
+      <div class="dog-grid" id="admin-dog-grid"></div>
+    </div>
+  </main>
+
+  <footer class="footer" id="main-footer">
+    <img src="logo.jfif" alt="logo" class="footer-logo" />
+    <p><strong>Paticas Tauste</strong></p>
+    <p>paticastauste@gmail.com &nbsp;·&nbsp; Facebook: Paticas Tauste &nbsp;·&nbsp; Instagram: @paticastauste</p>
+    <p class="footer-copy">© 2025 · Adopción responsable en Tauste, Zaragoza</p>
+  </footer>
+
+  <!-- ===== MODAL: PERFIL PERRO ===== -->
+  <div class="overlay" id="profile-overlay" onclick="handleProfileOverlayClick(event)">
+    <div class="profile-modal" id="profile-modal">
+      <button class="quiz-close" onclick="closeProfile()" style="position:absolute;top:14px;right:14px;z-index:2;">✕</button>
+      <div id="profile-content"></div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: QUIZ ===== -->
+  <div class="quiz-overlay" id="quiz-overlay" onclick="handleOverlayClick(event)">
+    <div class="quiz-modal" id="quiz-modal">
+      <div class="quiz-header">
+        <div class="quiz-dog-info" id="quiz-dog-info"></div>
+        <button class="quiz-close" onclick="closeQuiz()">✕</button>
+      </div>
+      <div class="quiz-progress-wrap" id="quiz-progress-wrap"></div>
+      <div class="quiz-body" id="quiz-body"></div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: LIGHTBOX ===== -->
+  <div class="lightbox hidden" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <div id="lightbox-content" onclick="event.stopPropagation()"></div>
+  </div>
+
+  <!-- ===== MODAL: AÑADIR/EDITAR PERRO ===== -->
+  <div class="modal-bg" id="add-modal" style="display:none;">
+    <div class="modal modal-wide">
+      <h3 class="modal-title" id="modal-title">Añadir nuevo perro</h3>
+      <div class="modal-grid">
+        <div class="field"><label>Nombre</label><input id="f-name" type="text" placeholder="Rex" /></div>
+        <div class="field"><label>Raza</label><input id="f-breed" type="text" placeholder="Labrador" /></div>
+        <div class="field"><label>Edad</label><input id="f-age" type="text" placeholder="2 años" /></div>
+        <div class="field"><label>Tamaño</label>
+          <select id="f-size"><option>Pequeño</option><option selected>Mediano</option><option>Grande</option></select>
+        </div>
+        <div class="field"><label>Energía</label>
+          <select id="f-energy"><option>Baja</option><option selected>Media</option><option>Alta</option></select>
+        </div>
+        <div class="field"><label>Emoji (si no hay foto)</label>
+          <select id="f-emoji"><option>🐕</option><option>🐶</option><option>🦮</option><option>🐩</option><option>🐾</option></select>
+        </div>
+      </div>
+      <div class="field" style="margin-top:12px;">
+        <label>Historia / Necesidades especiales</label>
+        <textarea id="f-needs" rows="3" placeholder="Cuéntanos su historia, carácter, necesidades especiales..."></textarea>
+      </div>
+
+      <!-- FOTOS Y VÍDEOS -->
+      <div class="media-upload-section">
+        <label class="media-section-label">📸 Fotos y vídeos</label>
+        <div class="media-upload-row">
+          <label class="media-file-btn">
+            + Subir fotos / vídeos
+            <input type="file" accept="image/*,video/*" multiple onchange="handleFileUpload(event)" style="display:none;" />
+          </label>
+          <span class="media-or">o</span>
+          <div class="media-url-row">
+            <input id="f-media-url" type="text" placeholder="Pega enlace YouTube, Instagram, TikTok…" class="media-url-input" />
+            <button class="btn-sm" onclick="addMediaUrl()">+ Añadir</button>
+          </div>
+        </div>
+        <div class="media-preview-grid" id="media-preview-grid"></div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-outline" onclick="closeModal('add-modal')">Cancelar</button>
+        <button class="btn-main" onclick="saveDog()">Guardar perro</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL: LOGIN ===== -->
+  <div class="modal-bg" id="login-modal" style="display:none;">
+    <div class="modal login-modal-box">
+      <div class="login-logo"><img src="logo.jfif" alt="Paticas Tauste" /></div>
+      <h3 class="modal-title" style="text-align:center;">Acceso protectora</h3>
+      <p class="login-sub">Introduce tus credenciales para acceder al panel de gestión.</p>
+      <div id="login-error" class="login-error hidden">Usuario o contraseña incorrectos.</div>
+      <div class="field" style="margin-bottom:12px;">
+        <label>Usuario</label>
+        <input id="login-user" type="text" placeholder="usuario" autocomplete="username" onkeydown="if(event.key==='Enter')doLogin()" />
+      </div>
+      <div class="field" style="margin-bottom:20px;">
+        <label>Contraseña</label>
+        <div class="pw-wrap">
+          <input id="login-pass" type="password" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()" />
+          <button class="pw-toggle" onclick="togglePw()">👁</button>
+        </div>
+      </div>
+      <button class="btn-main" style="width:100%;" onclick="doLogin()">Entrar al panel</button>
+      <button class="btn-outline" style="width:100%;margin-top:10px;" onclick="closeModal('login-modal')">Cancelar</button>
+    </div>
+  </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderDogs();
+  });
+</script>
+  <script src="app.js"></script>
+</body>
+</html>
